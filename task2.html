@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TIRUMALA Darshan Ticket Booking</title>
+        <script>
+            function validateForm() {
+                var name = document.forms["bookingForm"]["name"].value;
+                var email = document.forms["bookingForm"]["email"].value;
+                var noOfTickets = document.forms["bookingForm"]["noOfTickets"].value;
+    
+                if (name == "" || email == "" || noOfTickets == "") {
+                    alert("Please fill in all required fields.");
+                    return false;
+                }
+            }
+        </script>
+</head>
+<body>
+    <h1>TIRUMALA Darshan Ticket Booking</h1>
+    <form name="bookingForm" onsubmit="return validateForm()" method="post">
+        <label for="name">Full Name (Required):</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email Address (Required):</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="noOfTickets">Number of Tickets (Required):</label>
+        <input type="number" id="noOfTickets" name="noOfTickets" required><br><br>
+        <label for="specialRequests">Special Requests:</label>
+        <textarea id="specialRequests" name="specialRequests" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="SUBMIT">
+        <input type="reset" value="RESET">
+    </form>
+</body>
+</html>
